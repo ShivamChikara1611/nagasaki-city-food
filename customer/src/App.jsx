@@ -1,10 +1,11 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Home from './pages/Home'
+import Login from './pages/Login'
 
 
 
@@ -17,12 +18,13 @@ const App = () => {
       </div>
 
       {/* actual pages */}
-      <div className='pt-[77px]'>
+      <div className='pt-[77px] md:px-[10%]'>
         <ToastContainer />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login/>} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   )
