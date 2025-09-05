@@ -6,6 +6,8 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Login from './pages/Login'
+import AllRestaurants from './components/AllRestaurants';
+import Restaurant from './pages/Restaurant';
 
 
 
@@ -23,6 +25,8 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login/>} />
+          <Route path='/all-restaurants' element={<AllRestaurants/>} />
+          <Route path='/restaurants/:id' element={<Restaurant/>} />
         </Routes>
         {/* <Footer /> */}
       </div>

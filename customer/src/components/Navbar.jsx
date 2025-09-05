@@ -22,13 +22,13 @@ const Navbar = () => {
 
     return (
         <div className={`flex items-center justify-between text-md py-2 ${showMenu ? 'md:backdrop-blur-lg' : 'backdrop-blur-lg'} text-primary shadow px-2 md:px-[10%]`}>
-            <img onClick={() => navigate('/')} className='w-[50px] rounded-full cursor-pointer' src={assets.logo} alt="" />
+            <img onClick={() => navigate('/')} className='w-[60px] rounded-full cursor-pointer' src={assets.logo} alt="" />
             <ul className='hidden md:flex items-start gap-5 font-normal'>
                 <NavLink to='/'>
                     <li className='py-1 tracking-wide'>Home</li>
                     <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
                 </NavLink>
-                <NavLink to='/restaurants'>
+                <NavLink to='/all-restaurants'>
                     <li className='py-1 tracking-wide'>Restaurants</li>
                     <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
                 </NavLink>
@@ -60,7 +60,7 @@ const Navbar = () => {
                     </div>
                     <ul className='flex flex-col items-center gap-5 mt-12 px-5 text-lg font-medium w-full'>
                         <NavLink onClick={() => setShowMenu(false)} to='/'><p className='px-10 py-2 rounded-full'>HOME</p></NavLink>
-                        <NavLink onClick={() => setShowMenu(false)} to='/restaurants'><p className='px-10 py-2 rounded-full'>RESTAURANTS</p></NavLink>
+                        <NavLink onClick={() => setShowMenu(false)} to='/all-restaurants'><p className='px-10 py-2 rounded-full'>RESTAURANTS</p></NavLink>
                         <NavLink onClick={() => setShowMenu(false)} to='/about'><p className='px-10 py-2 rounded-full'>ABOUT</p></NavLink>
                         <NavLink onClick={() => setShowMenu(false)} to='/contact'><p className='px-10 py-2 rounded-full'>CONTACT US</p></NavLink>
 
